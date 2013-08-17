@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   #let user access edit and update action only if they are signed in.
-  before_action :sign_in_user, only: [:indes, :edit, :update, :deatroy
+  before_action :sign_in_user, only: [:indes, :edit, :update, :deatroy]
   #let user change their own data only.
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
