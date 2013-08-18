@@ -1,0 +1,9 @@
+<li>
+  <span class="content"><%= the_micropost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(the_micropost.created_at) %> ago.
+  </span>
+   <% if current_user?(the_micropost.user) %>
+    <%= link_to "delete", the_micropost, method: :delete, data: { confirm: "You sure?" },title: the_micropost.content %>
+  <% end %>
+</li>
